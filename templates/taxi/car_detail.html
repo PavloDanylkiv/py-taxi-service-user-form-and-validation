@@ -13,7 +13,7 @@
       <input type="submit" value="Delete me from this car" class="btn btn-danger link-to-page">
     </form>
     {% else %}
-    <form action="{% url 'taxi:car-assign-driver' car.id %}">
+    <form action="{% url 'taxi:car-assign-driver' car.id %}" method="post">
     {% csrf_token %}
       <input type="submit" value="Assign me to this car" class="btn btn-primary link-to-page">
     </form>
